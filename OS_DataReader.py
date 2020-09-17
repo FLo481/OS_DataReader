@@ -180,8 +180,8 @@ def calc_ang_res():
     plt.errorbar(x_plt2, y_plt2, yerr = y_err2, fmt = 'x', markersize = 5, label = '1200 l/mm grating', elinewidth = .5, capsize = 2)
 
     plt.legend()
-    plt.xlabel("Slit width [µm]")
-    plt.ylabel("Angular resolution")
+    plt.xlabel("Slit width [µm]", fontsize = 16)
+    plt.ylabel("Resolution capability", fontsize = 16)
     plt.grid()
     plt.show()
     plt.clf()
