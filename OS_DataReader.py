@@ -175,11 +175,13 @@ def calc_ang_res():
         y_err2[i] = y_plt2[i]*np.sqrt((perr2[i][3]/params2[i][3])**2+(perr2[i][2]/params2[i][2])**2)
 
 
-    plt.errorbar(x_plt, y_plt, yerr = y_err, fmt = 'x', markersize = 5, label = 'Grating 150', elinewidth = .5, capsize = 2)
-    plt.errorbar(x_plt1, y_plt1, yerr = y_err1, fmt = 'x', markersize = 5, label = 'Grating 300', elinewidth = .5, capsize = 2)
-    plt.errorbar(x_plt2, y_plt2, yerr = y_err2, fmt = 'x', markersize = 5, label = 'Grating 1200', elinewidth = .5, capsize = 2)
+    plt.errorbar(x_plt, y_plt, yerr = y_err, fmt = 'x', markersize = 5, label = '150 l/mm grating', elinewidth = .5, capsize = 2)
+    plt.errorbar(x_plt1, y_plt1, yerr = y_err1, fmt = 'x', markersize = 5, label = '300 l/mm grating', elinewidth = .5, capsize = 2)
+    plt.errorbar(x_plt2, y_plt2, yerr = y_err2, fmt = 'x', markersize = 5, label = '1200 l/mm grating', elinewidth = .5, capsize = 2)
 
     plt.legend()
+    plt.xlabel("Slit width [µm]")
+    plt.ylabel("Angular resolution")
     plt.grid()
     plt.show()
     plt.clf()
